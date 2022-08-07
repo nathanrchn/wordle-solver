@@ -27,16 +27,17 @@ def compute_pattern(word: str, solution: list):
     return result
 
 
-with open("words.txt", "r") as words:
-    word_list = words.read().splitlines()
+def get_list():
+    with open("words.txt", "r") as words:
+        word_list = words.read().splitlines()
 
-matrix = []
+    matrix = []
 
-for i in tqdm(range(len(word_list))):
-    m = []
-    for n in range(len(word_list)):
-        m.append("".join(compute_pattern(word_list[i], list(word_list[n]))))
-    matrix.append(m)
+    for i in tqdm(range(len(word_list))):
+        m = []
+        for n in range(len(word_list)):
+            m.append("".join(compute_pattern(word_list[i], list(word_list[n]))))
+        matrix.append(m)
 
-matrix = array(matrix)
-save("wordle.npy", matrix)
+    matrix = array(matrix)
+    save("wordle.npy", matrix)
