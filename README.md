@@ -3,7 +3,14 @@
 Wordle-solver is an algorithm that solves the French Wordle with 5 letter words. This algorithm uses the mathematical concept of Entropy.
 
 ## Usage
-To use the Wordle-solver, you need a list of words. Then, to create the sequence matrix, you just need to run the file get_matrix.py. Then here is an example of use:
+To use the Wordle-solver, you need a list of words. Then, to create the sequence matrix, you just need to run the file get_matrix.py.
+```python
+from get_list import get_list
+
+get_list() # It will create a file named wordle.npy
+```
+
+Then here is an example of use:
 ```python
 from wordle import Wordle
 
