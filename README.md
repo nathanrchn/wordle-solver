@@ -1,2 +1,2 @@
-# wordle
-An algorithm that plays Wordle in French with 5 letter words.
+# wordle-solver
+An algorithm that solves the French Wordle with 5 letter words.
